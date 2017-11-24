@@ -2,6 +2,8 @@
 
 Mark Harrison : 23 Nov 2017
 
+![](Images/Minikube.png)
+
 - [Part 1 - Minikube](minikube.md)
 
 ---
