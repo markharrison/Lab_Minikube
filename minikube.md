@@ -40,6 +40,8 @@ Alternatively to Chocolately - refer to the following for installation instructi
 Having installed Minikube - we need to start it.
 
 - Assuming a Hyper-V virtualisation platform, invoke the following:
+  - Amend switch name to whatever used in the Hyper-V networking
+  - Amend memory depending on much is available
 
 ```text
 minikube version
