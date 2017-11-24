@@ -1,4 +1,4 @@
-# Lab_Minikube  - Hands-on Lab Script
+# Minikube  - Hands-on Lab Script
 
 Mark Harrison : 23 Nov 2017
 
