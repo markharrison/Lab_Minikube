@@ -75,7 +75,7 @@ minikube dashboard
 
 ![](Images/MinikubeDashboard2.png)
 
-### Deployments
+## Deployments
 
 The next task is to install a service.  This will be a Web API application deployed from a container registry.
 
@@ -134,8 +134,6 @@ kubectl get pods
 ![](Images/MinikubeScale.png)
 
 ![](Images/MinikubeScaleDB.png)
-
-Minikube
 
 ## Resilience
 
