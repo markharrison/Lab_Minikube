@@ -1,6 +1,6 @@
 # Minikube  - Hands-on Lab Script
 
-Mark Harrison : 23 Nov 2017
+Mark Harrison : checked & updated 14 March 2020 - original 18 Nov 2017
 
 ![](Images/Minikube.png)
 

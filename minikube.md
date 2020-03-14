@@ -1,6 +1,6 @@
 # Minikube - Hands-on Lab Script
 
-Mark Harrison : 18 Nov 2017
+Mark Harrison : checked & updated 14 March 2020 - original 18 Nov 2017
 
 ![](Images/Minikube.png)
 
@@ -18,7 +18,7 @@ Kubernetes command-line tool, kubectl, is used to deploy and manage applications
 
 ## Installation
 
-To install on Windows, use Chocolatey - which will install both minikube and kubectl :
+To install on Windows, use Chocolatey <https://chocolatey.org/>hyper - which will install both minikube and kubectl :
 
 <https://chocolatey.org/packages/Minikube>
 
@@ -84,7 +84,7 @@ The next task is to install a service.  This will be a Web API application deplo
 ```text
 kubectl get deployments
 
-kubectl run colorapi --image=markharrison/colorapi:v1 --port=80
+kubectl create deployment colorapi --image=markharrison/colorapi:v1
 
 kubectl expose deployment colorapi --type="NodePort" --port=8099 --target-port=80
 
@@ -95,7 +95,7 @@ minikube service colorapi --url
 
 ![](Images/MinikubeDeployment.png)
 
-- Browse to the assigned URL (append `/swagger`) e.g. <http://192.168.1.174:32284/swagger>
+- Browse to the assigned URL (append `/swagger`) i.e. (in my case) <http://192.168.1.219:31294/swagger>
 
 - This is V1 of the container - note that the RandomColor API returns a random shade of green.
 
@@ -103,8 +103,9 @@ minikube service colorapi --url
 
 Alternatively, can we can deploy the service from within the kubernetes dashboard:
 
-- Select [Create] top right
-- Specify App name - and docker image (ColorApi) to pull
+- Select [+] [Create new resource] top right
+- Select [Create from form] in the tabs list
+- Specify App name - and docker image (ColorApi) to pull - and External service ... Deploy
 - Check logs
 
 ![](Images/MinikubeDeploymentDB1.png)
@@ -165,7 +166,7 @@ kubectl edit deployment colorapi
 
 - Edit the container image to point to V2 - save the file
 
- ![](Images/MinikubeUpdate.png)
+![](Images/MinikubeUpdate.png)
 
 - Browse to the service - same URL as before
 - Note that V2 of the RandomColor API returns a random shade of blue (from above, it was previously shades of green).
